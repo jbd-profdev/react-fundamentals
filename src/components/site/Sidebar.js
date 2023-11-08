@@ -8,6 +8,7 @@ import Home from './Home';
 import Resources from './Resources';
 import FunctionalComponentDemo from '../concepts/FunctionalComponents/FunctionalComponentDemo';
 import ClassComponentDemo from '../concepts/ClassComponents/ClassComponentDemo';
+import JSX from '../concepts/JSX/JSX';
 
 const Sidebar = () => {
     return(
@@ -18,6 +19,7 @@ const Sidebar = () => {
                     <li><Link to='/resources'>Resources</Link></li>
                     <li><Link to='/functionalcomponent'>Functional Component</Link></li>
                     <li><Link to='/classcomponent'>Class Component</Link></li>
+                    <li><Link to='/jsx'>JSX</Link></li>
                 </ul>
             </div>
             <div className='sidebar-route'>
@@ -27,6 +29,7 @@ const Sidebar = () => {
                     <Route exact path='/' element={<Home/>}/>
                     <Route exact path='/functionalcomponent' element={<FunctionalComponentDemo/>}/>
                     <Route exact path='/classcomponent' element={<ClassComponentDemo/>}/>
+                    <Route exact path='/jsx' element={<JSX/>}/>
                 </Routes>
             </div>
         </div>
