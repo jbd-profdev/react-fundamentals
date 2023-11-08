@@ -10,9 +10,12 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 
+// import FunctionalComponentDemo from './components/concepts/FunctionalComponents/FunctionalComponentDemo';
+
 function App() {
   return (
     <div className="App">
+      {/* <FunctionalComponentDemo/> */}
       <Header/>
       <Router>
         <Sidebar/>

@@ -4,8 +4,10 @@ const Footer = () => {
     return(
         <footer>
             <Row>
-                <p> Eleven Fifty 2023</p>
+                <p>© Eleven Fifty 2023</p>
             </Row>
         </footer>
     );
 };
+
+export default Footer;

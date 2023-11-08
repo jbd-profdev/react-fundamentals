@@ -1,7 +1,9 @@
 const FunctionalComponentDemo = () => {
     return(
-        <div>
-            Hello React
+        <div className="main">
+            <div className="mainDiv">
+                Hello React
+            </div>
         </div>
     );
 };
