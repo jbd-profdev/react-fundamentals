@@ -2,7 +2,12 @@ const FunctionalComponentDemo = () => {
     return(
         <div className="main">
             <div className="mainDiv">
-                Hello React
+                <div>
+                    Hello React
+                </div>
+                <div>
+                    How are you today?
+                </div>
             </div>
         </div>
     );
