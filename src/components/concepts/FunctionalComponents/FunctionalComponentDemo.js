@@ -17,12 +17,6 @@ const FunctionalComponentDemo = () => {
                     <dd>Functional Components (as well as Class Components) must return a single element - but the single element 
                         from the function may have children elements nested inside of it.</dd>
                 </dl>
-                {/* <div>
-                    Hello React
-                </div>
-                <div>
-                    How are you today?
-                </div> */}
             </div>
         </div>
     );
