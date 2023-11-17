@@ -41,6 +41,11 @@ class LifecycleMethods extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        console.log('clearing interval');
+        clearInterval(this.fetchInterval);
+    }
+
     render() {
         return (
             <div className="main">
