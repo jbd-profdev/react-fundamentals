@@ -13,6 +13,7 @@ import State from '../concepts/State/State';
 import Props from '../concepts/Props/Props';
 import LifecycleMethods from '../concepts/LifecycleMethods/LifecycleMethods';
 import TimePiecesApp from '../apps/TimerApps/TimePiecesApp';
+import NytApp from '../apps/nyt-app/NytApp';
 
 const Sidebar = () => {
     return(
@@ -28,6 +29,7 @@ const Sidebar = () => {
                     <li><Link to='/props'>Props</Link></li>
                     <li><Link to='/lifecyclemethods'>Lifecycle Methods</Link></li>
                     <li><Link to='/timers'>Timers</Link></li>
+                    <li><Link to='/nytapp'>NytApp</Link></li>
                 </ul>
             </div>
             <div className='sidebar-route'>
@@ -42,6 +44,7 @@ const Sidebar = () => {
                     <Route exact path='/props' element={<Props/>}/>
                     <Route exact path='/lifecyclemethods' element={<LifecycleMethods/>}/>
                     <Route exact path='/timers' element={<TimePiecesApp/>}/>
+                    <Route exact path='/nytapp' element={<NytApp/>}/>
                 </Routes>
             </div>
         </div>
