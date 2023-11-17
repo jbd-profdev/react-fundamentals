@@ -28,6 +28,19 @@ class LifecycleMethods extends React.Component {
         }, 15000)
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        console.log(prevState.main.temp, this.state.main.temp);
+
+        let localTime = new Date().toLocaleTimeString();
+
+        if (prevState.main.temp !== this.state.main.temp) {
+            console.log('state has changed');
+            this.setState({
+                time: localTime
+            })
+        }
+    }
+
     render() {
         return (
             <div className="main">
