@@ -13,7 +13,23 @@ class State extends React.Component {
         }
     }
 
-    // methods/life-cycle methods will be declared here
+    // methods/life-cycle methods will be declared 
+    
+    handleChange = (event) => {
+        event.target.className === 'boxOne' ? (
+            this.setState({
+                boxOne: event.target.checked
+            })
+        ) : event.target.className === 'boxTwo' ? (
+            this.setState({
+                boxTwo: event.target.checked
+            })
+        ) : event.target.className === 'boxThree' ? (
+            this.setState({
+                boxThree: event.target.checked
+            })
+        ) : console.log('Something went wrong')
+    }
 
     render() {
         return (
@@ -24,21 +40,42 @@ class State extends React.Component {
                     <dl>
                         <div>
                             <div style={{display: 'flex', flexDirection: 'row'}}>
-                                <input type="checkbox" className="boxOne" style={{marginRight: '5px'}}/>
+                                <input type="checkbox" className="boxOne" style={{marginRight: '5px'}} onChange={(e) => this.handleChange(e)}/>
                                 <dt>State data is local</dt>
                             </div>
+                            {
+                                this.state.boxOne ? (
+                                    <dd className="descriptionOne">{this.state.descriptionOne}</dd>
+                                ) : (
+                                    <div></div>
+                                )
+                            }
                         </div>
                         <div>
                             <div style={{display: 'flex', flexDirection: 'row'}}>
-                                <input type="checkbox" className="boxTwo" style={{marginRight: '5px'}}/>
+                                <input type="checkbox" className="boxTwo" style={{marginRight: '5px'}} onChange={(e) => this.handleChange(e)}/>
                                 <dt>Representational</dt>
                             </div>
+                            {
+                                this.state.boxTwo ? (
+                                    <dd className="descriptionTwo">{this.state.descriptionTwo}</dd>
+                                ) : (
+                                    <div></div>
+                                )
+                            }
                         </div>
                         <div>
                             <div style={{display: 'flex', flexDirection: 'row'}}>
-                                <input type="checkbox" className="boxThree" style={{marginRight: '5px'}}/>
+                                <input type="checkbox" className="boxThree" style={{marginRight: '5px'}} onChange={(e) => this.handleChange(e)}/>
                                 <dt>State/props change triggers a re-render</dt>
                             </div>
+                            {
+                                this.state.boxThree ? (
+                                    <dd className="descriptionThree">{this.state.descriptionThree}</dd>
+                                ) : (
+                                    <div></div>
+                                )
+                            }
                         </div>
                     </dl>
                 </div>
