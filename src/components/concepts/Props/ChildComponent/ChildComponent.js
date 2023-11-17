@@ -14,6 +14,9 @@ const ChildComponent = (props) => {
                 <dt>Read Only</dt>
                 <dd>{props.descriptionThree}</dd>
             </dl>
+            <div style={{textAlign: 'center'}}>
+                <button onClick={props.counter} style={{width: '200px', height: '50px', borderRadius: '5px', backgroundColor: '#333', color: 'white'}}>{props.number}</button>
+            </div>
         </div>
     )
 }

@@ -10,9 +10,11 @@ class Props extends React.Component {
             descriptionThree: 'Whether you declare a component as a class component or a functional component, it must never modify its own props.',
             number: 0
         }
+
+        this.counter = this.counter.bind(this);
     }
 
-    counter = () => {
+    counter() {
         this.setState({
             number: this.state.number + 1
         })
