@@ -1,6 +1,6 @@
 import React from "react";
 
-import ChildComponent from "../Props/ChildComponent/ChildComponent";
+import ChildComponent from "../LifecycleMethods/ChildComponent/ChildComponent";
 import { json } from "react-router-dom";
 
 class LifecycleMethods extends React.Component {
@@ -50,7 +50,7 @@ class LifecycleMethods extends React.Component {
         return (
             <div className="main">
                 <div className="mainDiv" style={{textAlign: 'center'}}>
-                    <ChildComponent/>
+                    <ChildComponent city={this.state.city} main={this.state.main} weather={this.state.weather} time={this.state.time}/>
                 </div>
             </div>
         )
